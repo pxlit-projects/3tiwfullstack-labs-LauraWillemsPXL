@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  departmentservice-db:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: 'departmentservice_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'

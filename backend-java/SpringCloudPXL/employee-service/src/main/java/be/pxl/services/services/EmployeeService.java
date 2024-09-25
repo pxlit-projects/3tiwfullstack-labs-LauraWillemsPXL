@@ -18,6 +18,8 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void addEmployee(EmployeeRequest employeeRequest) {
         Employee employee = Employee.builder()
+                .organizationId(employeeRequest.getOrganizationId())
+                .departmentId(employeeRequest.getDepartmentId())
                 .name(employeeRequest.getName())
                 .age(employeeRequest.getAge())
                 .position(employeeRequest.getPosition())
@@ -55,6 +57,8 @@ public class EmployeeService implements IEmployeeService {
 
     private EmployeeResponse mapToEmployeeResponse(Employee employee) {
         return EmployeeResponse.builder()
+                .organizationId(employee.getOrganizationId())
+                .departmentId(employee.getDepartmentId())
                 .name(employee.getName())
                 .age(employee.getAge())
                 .position(employee.getPosition())
