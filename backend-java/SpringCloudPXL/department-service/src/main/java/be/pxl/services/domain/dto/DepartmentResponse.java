@@ -14,7 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DepartmentResponse {
-    private Long id;
     private Long organizationId;
     private String name;
     private String position;

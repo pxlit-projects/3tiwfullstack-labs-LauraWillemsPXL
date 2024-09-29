@@ -14,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrganizationResponse {
+    private Long id;
     private String name;
     private String address;
     private List<Employee> employees;
