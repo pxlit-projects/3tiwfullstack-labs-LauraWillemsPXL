@@ -1,6 +1,5 @@
 package be.pxl.services.domain.dto;
 
-import be.pxl.services.domain.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DepartmentRequest {
+    private Long id;
     private Long organizationId;
     private String name;
     private String position;

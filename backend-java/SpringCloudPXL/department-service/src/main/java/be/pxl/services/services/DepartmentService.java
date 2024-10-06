@@ -60,6 +60,7 @@ public class DepartmentService implements IDepartmentService {
 
     private DepartmentResponse mapToDepartmentResponse(Department department) {
         return DepartmentResponse.builder()
+                .id(department.getId())
                 .organizationId(department.getOrganizationId())
                 .name(department.getName())
                 .position(department.getPosition())
@@ -68,6 +69,7 @@ public class DepartmentService implements IDepartmentService {
 
     private DepartmentResponse mapToDepartmentResponseWithEmployees(Department department) {
         return DepartmentResponse.builder()
+                .id(department.getId())
                 .organizationId(department.getOrganizationId())
                 .name(department.getName())
                 .position(department.getPosition())
