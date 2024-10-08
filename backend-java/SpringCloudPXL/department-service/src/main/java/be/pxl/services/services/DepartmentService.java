@@ -50,12 +50,10 @@ public class DepartmentService implements IDepartmentService {
                 .toList();
     }
 
-    //not finished
+    //TODO
     @Override
     public List<DepartmentResponse> findByOrganizationWithEmployees(Long organizationId) {
-        return departmentRepository.findByOrganizationId(organizationId).stream()
-                .map(department -> mapToDepartmentResponseWithEmployees(department))
-                .toList();
+        return List.of(null);
     }
 
     private DepartmentResponse mapToDepartmentResponse(Department department) {

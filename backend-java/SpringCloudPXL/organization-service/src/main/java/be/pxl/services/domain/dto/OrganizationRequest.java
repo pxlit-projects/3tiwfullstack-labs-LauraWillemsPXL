@@ -15,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrganizationRequest {
+    private Long id;
     private String name;
     private String address;
     private List<Employee> employees;

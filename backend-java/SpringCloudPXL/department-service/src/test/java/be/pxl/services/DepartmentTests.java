@@ -47,9 +47,6 @@ public class DepartmentTests {
     @Container
     private static MySQLContainer sqlContainer = new MySQLContainer("mysql:5.7.37");
 
-    @Autowired
-    private DepartmentService departmentService;
-
     @DynamicPropertySource
     static void registerMySQLProperties(DynamicPropertyRegistry registry) {
         registry.add("spring.datasource.url", sqlContainer::getJdbcUrl);
@@ -136,16 +133,7 @@ public class DepartmentTests {
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
-    /*
+    //TODO
     @Test
-    public void testFindByOrganizationWithEmployees() throws Exception {
-        departmentRepository.save(department);
-
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/department/organization/{organizationId}/with-employees", department.getOrganizationId()))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.length()").value(1))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].id").value(department.getId()))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].organizationId").value(department.getOrganizationId()))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].employees.length()").value(1))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].employees[0].name").value("Emiel Willems"));
-    }*/
+    public void testFindByOrganizationWithEmployees() throws Exception {}
 }

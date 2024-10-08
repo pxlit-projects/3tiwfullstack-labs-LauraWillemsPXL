@@ -21,6 +21,7 @@ public class OrganizationService implements IOrganizationService {
         return null;
     }
 
+    //TODO
     @Override
     public OrganizationResponse findByIdWithDepartments(Long id) {
         Organization organization = organizationRepository.findById(id).orElse(null);
@@ -30,6 +31,7 @@ public class OrganizationService implements IOrganizationService {
         return null;
     }
 
+    //TODO
     @Override
     public OrganizationResponse findByIdWithDepartmentsAndEmployees(Long id) {
         Organization organization = organizationRepository.findById(id).orElse(null);
@@ -39,6 +41,7 @@ public class OrganizationService implements IOrganizationService {
         return null;
     }
 
+    //TODO
     @Override
     public OrganizationResponse findByIdWithEmployees(Long id) {
         Organization organization = organizationRepository.findById(id).orElse(null);

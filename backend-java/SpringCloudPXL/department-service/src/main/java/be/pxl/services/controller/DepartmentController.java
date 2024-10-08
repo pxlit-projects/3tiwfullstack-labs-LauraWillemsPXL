@@ -38,6 +38,7 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentService.findByOrganization(organizationId), HttpStatus.OK);
     }
 
+    //TODO
     @GetMapping("/organization/{organizationId}/with-employees")
     public ResponseEntity<List<DepartmentResponse>> findByOrganizationWithEmployees(@PathVariable Long organizationId) {
         return new ResponseEntity<>(departmentService.findByOrganizationWithEmployees(organizationId), HttpStatus.OK);
