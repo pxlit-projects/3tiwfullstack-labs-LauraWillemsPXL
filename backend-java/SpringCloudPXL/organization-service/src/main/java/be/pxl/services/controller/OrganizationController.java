@@ -1,5 +1,6 @@
 package be.pxl.services.controller;
 
+import be.pxl.services.domain.dto.OrganizationRequest;
 import be.pxl.services.domain.dto.OrganizationResponse;
 import be.pxl.services.services.OrganizationService;
 import lombok.RequiredArgsConstructor;
@@ -11,8 +12,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/organization")
 @RequiredArgsConstructor
 public class OrganizationController {
-
     private final OrganizationService organizationService;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addOrganization(@RequestBody OrganizationRequest organizationRequest) {
+        organizationService.addOrganization(organizationRequest);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<OrganizationResponse> findById(@PathVariable Long id) {

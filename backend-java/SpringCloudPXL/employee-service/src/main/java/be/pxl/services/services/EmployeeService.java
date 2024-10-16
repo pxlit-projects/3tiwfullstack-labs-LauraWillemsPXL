@@ -1,8 +1,11 @@
 package be.pxl.services.services;
 
+import be.pxl.services.client.NotificationClient;
 import be.pxl.services.domain.Employee;
+import be.pxl.services.domain.Notification;
 import be.pxl.services.domain.dto.EmployeeRequest;
 import be.pxl.services.domain.dto.EmployeeResponse;
+import be.pxl.services.domain.dto.NotificationRequest;
 import be.pxl.services.repository.IEmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,7 @@ import java.util.List;
 public class EmployeeService implements IEmployeeService {
 
     private final IEmployeeRepository employeeRepository;
+    private final NotificationClient notificationClient;
 
     @Override
     public void addEmployee(EmployeeRequest employeeRequest) {
@@ -26,6 +30,13 @@ public class EmployeeService implements IEmployeeService {
                 .build();
 
         employeeRepository.save(employee);
+
+        NotificationRequest notificationRequest = NotificationRequest.builder()
+                .message("Created an employee")
+                .sender("Laura")
+                .build();
+
+        notificationClient.sendNotification(notificationRequest);
     }
 
     @Override

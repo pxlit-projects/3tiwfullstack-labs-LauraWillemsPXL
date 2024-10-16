@@ -43,6 +43,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
             <groupId>be.pxl.services</groupId>
             <artifactId>employee-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>

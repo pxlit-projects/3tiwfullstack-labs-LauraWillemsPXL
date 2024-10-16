@@ -1,4 +1,4 @@
-package be.pxl.services.domain;
+package be.pxl.services.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Notification {
+@NoArgsConstructor
+public class NotificationRequest {
     private String message;
     private String sender;
 }
