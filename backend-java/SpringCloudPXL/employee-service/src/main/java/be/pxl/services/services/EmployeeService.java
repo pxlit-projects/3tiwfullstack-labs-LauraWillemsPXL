@@ -8,6 +8,8 @@ import be.pxl.services.domain.dto.EmployeeResponse;
 import be.pxl.services.domain.dto.NotificationRequest;
 import be.pxl.services.repository.IEmployeeRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +20,9 @@ public class EmployeeService implements IEmployeeService {
 
     private final IEmployeeRepository employeeRepository;
     private final NotificationClient notificationClient;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     public void addEmployee(EmployeeRequest employeeRequest) {
@@ -37,6 +42,8 @@ public class EmployeeService implements IEmployeeService {
                 .build();
 
         notificationClient.sendNotification(notificationRequest);
+
+        rabbitTemplate.convertAndSend("myQueue", "New employee is created");
     }
 
     @Override
@@ -50,6 +57,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public List<EmployeeResponse> getAllEmployees() {
+        rabbitTemplate.convertAndSend("myQueue", "Finding all employees");
         List<Employee> employees = employeeRepository.findAll();
         return employees.stream().map(employee -> mapToEmployeeResponse(employee)).toList();
     }
