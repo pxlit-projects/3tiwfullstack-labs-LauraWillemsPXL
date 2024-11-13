@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16f6c238-4bc7-4256-8624-01658817c95c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/config-service/src/main/resources/config/gateway-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/gateway-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/gateway-service/src/main/java/be/pxl/services/GatewayServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/gateway-service/src/test/java/be/pxl/services/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-java/SpringCloudPXL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-java/SpringCloudPXL/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,21 +13,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LauraWillemsPXL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LauraWillemsPXL&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pxlit-projects/3tiwfullstack-labs-LauraWillemsPXL.git",
-    "accountId": "5d4782d4-0ff8-4cb3-885a-f280f6e989af"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pxlit-projects/3tiwfullstack-labs-LauraWillemsPXL.git&quot;,
+    &quot;accountId&quot;: &quot;5d4782d4-0ff8-4cb3-885a-f280f6e989af&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oSztjqZ66IzgQrXJVUVNFKTlNO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/laura/Documents/PXL/3TIN/Fullstack_Java/Backend/Labs/3tiwfullstack-labs-LauraWillemsPXL/backend-java/SpringCloudPXL",
+    "last_opened_file_path": "C:/Users/laura/Documents/PXL/3TIN/Fullstack_Java/Backend/3tiwfullstack-labs-LauraWillemsPXL/backend-java/SpringCloudPXL",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -64,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1730877981184</updated>
       <workItem from="1730877982261" duration="23000" />
+      <workItem from="1731484560115" duration="113000" />
+      <workItem from="1731484733996" duration="13000" />
     </task>
     <servers />
   </component>
